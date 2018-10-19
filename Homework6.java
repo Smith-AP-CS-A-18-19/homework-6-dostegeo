@@ -1,22 +1,43 @@
 public class Homework6 {
-
+//George Doster
 	/* Finish the constructor and create any necessary instance
 	 * variables
 	 */
+	 private String s;
+	 private int a;
+	 private int b;
+	 private int c;
 	public Homework6(String s, int a, int b, int c) {
-
+this.s = s;
+this.a = a;
+this.b = b;
+this.c = c;
 	}
 
 	/* Return true if the stored String comes before the provided
 	 * String lexicographically, return false if it does not
 	 */
-	public boolen isBefore(String other) {
+	public boolean isBefore(String other) {
+if (s.compareTo(other) == 1){
+	return true;
+}else {
+	return false;
+}
+
 
 	}
 
 	/* Return the maximum of the stored integers
 	 */
 	public int max() {
+if (a>b && a>c){
+	return a;
+} if (b>a && b>c){
+	return b;
+} else {
+	return c;
+}
+
 
 	}
 
@@ -26,6 +47,25 @@ public class Homework6 {
 	 * to receive full credit
 	 */
 	public int mid() {
+if (max()==a && b>c){
+	return b;
+}if (max()==a && c>b){
+	return c;
+}if (max()==b && a>c){
+	return a;
+}if (max()==b && c>a){
+	return c;
+}if (max()==c && a>b){
+	return a;
+}if (max()==c && b>a){
+	return b;
+}if (a==c && a>b){
+	return b;
+}if (b==c && b>a){
+	return a;
+}if (a==b && a>c){
+	return c;
+}
 
 	}
 
@@ -35,6 +75,11 @@ public class Homework6 {
 	 * >= or =<; instead use < or > and invert them with !
 	 */
 	public boolean isAscending() {
+if (!(a<b && b<c)){
+	return true;
+}else {
+	return false;
+}
 
 	}
 
@@ -87,5 +132,4 @@ public class Homework6 {
 
 		System.exit(exitCode);
 	}
-	
 }
