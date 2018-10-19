@@ -47,26 +47,25 @@ if (a>b && a>c){
 	 * to receive full credit
 	 */
 	public int mid() {
-if (max()==a && b>c){
+	 if (a==c && a>b){
+			return b;
+		}else if (b==c && b>a){
+			return a;
+}else if (max()==a && b>c){
 	return b;
-}if (max()==a && c>b){
+}else if (max()==a && c>b){
 	return c;
-}if (max()==b && a>c){
+}else if (max()==b && a>c){
 	return a;
-}if (max()==b && c>a){
+}else if (max()==b && c>a){
 	return c;
-}if (max()==c && a>b){
+}else if (max()==c && a>b){
 	return a;
-}if (max()==c && b>a){
+}else if (max()==c && b>a){
 	return b;
-}if (a==c && a>b){
-	return b;
-}if (b==c && b>a){
-	return a;
-}if (a==b && a>c){
+}else{
 	return c;
 }
-
 	}
 
 	/* Return true if the stored numbers were provided in ascending
